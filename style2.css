@@ -18,12 +18,15 @@ input[type="text"]{
 }
 
 .heading{
+    text-align: center;
     font-size: 18px;
     font-weight: bold;
+    padding: 8px 0px;
+    margin: 0px;
     color: white !important;
 }
 
-.sud-row{
+.row{
     background-color: #EEE;
     color: #669;
     border-top: 2px solid white;
@@ -34,19 +37,19 @@ input[type="text"]{
 	max-height: 140px;
 }
 
-#score-table> .sud-row:first-child{
+#score-table> .row:first-child{
     background-color: #5284BB;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px; 
 }
 
-.sud-row:last-child{
+.row:last-child{
     background-color: #5284BB;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px; 
 }
 
-.sud-row>.box:first-child{
+.row>.box:first-child{
     padding: 1% 0 0 0;
     font-size: 38pt;
     line-height: 0.7;
@@ -54,7 +57,7 @@ input[type="text"]{
     border: none;
 }
 
-.sud-row>.box:last-child{
+.row>.box:last-child{
     border-right: 2px solid white;
 }
 
@@ -92,6 +95,7 @@ input[type="text"]{
 .previous, .next{
     cursor: pointer;
     font-weight: bold;
+	padding: 5% 8% 1% 8%;
 }
 
 .box>div:last-child{
@@ -209,4 +213,16 @@ input[type="text"]{
 }
 .basic-grey input[type="submit"]{
     float: right;
+}
+
+.basic-grey input[type="submit"], input[type="button"]{
+    background-color: #EEE;
+    border-radius: 5px;
+    border: 1px solid #DADADA;
+    margin: 10px 0 0 0;
+	vertical-align: top;
+}
+.basic-grey input[type="submit"]:hover, input[type="button"]:hover{
+    background-color: #DADADA;
+    cursor: pointer;
 }

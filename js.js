@@ -162,4 +162,3 @@ function removePlayer(now) {
     $('.pl_name:nth-child(n+' + (now+1) + ')').remove();
     return now;
 }
-
