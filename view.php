@@ -7,10 +7,10 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="my.js"></script>
 </head>
-<div class="wrapper">
+<div class="container-fluid wrapper">
     <div class="row">
         <div class="col-xs-1"></div>
-        <div class="col-xs-8">
+        <div class="col-xs-8 main_info">
             <div class="player_info">
             <div class="row">
                 <div class="col-xs-6"><h3>Sudavar</h3></div>

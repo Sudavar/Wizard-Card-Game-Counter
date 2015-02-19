@@ -4,7 +4,10 @@ $( document ).ready( function() {
     var players = $( '.player_info' );
     var players_table = $( '.list-group > a ' );
     var number_of_players = players.length;
-    
+
+    var main_info = $( '.main_info' )[0];
+    $( '#all-players' ).css( 'max-height', $( main_info ).css( 'height' ) );
+
     $( '.next_player' ).click( function() {
         $( players[ current_player ] ).addClass( 'hidden' );
         $( players_table[ current_player ] ).removeClass( 'active' );
