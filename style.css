@@ -10,6 +10,9 @@
 .clickable:hover {
     cursor: pointer;
 }
+.disabled:hover {
+    cursor: not-allowed;
+}
 .inputs {
     font-size: 30px;
     width: 80%;
