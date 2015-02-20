@@ -69,21 +69,17 @@
                             <div class="col-sm-7"><h4><span class="current_round"></span> / 20</h4></div>
                         </div>
                         <div class="col-xs-7 col-sm-6">
-                            <div class="col-xs-6 col-sm-4">
-                                <input type="button" class="btn btn-primary disabled" value="&larr;" />
-                            </div>
-                            <div class="col-xs-6 col-sm-4">
-                                <input type="button" class="btn btn-primary disabled" value="&rarr;" />
-                            </div>
-                            <div class="col-xs-12 col-sm-4">
-                                <input type="button" class="btn btn-primary " value="Start" />
-                            </div>
+                            <button type="button" id="start_round" class="btn btn-primary" disabled="disabled">Start</button>
+                            <button type="button" id="finish_round" class="btn btn-primary hidden">Finish</button>
                         </div>
                     </div>
                 </div>
                 <div class="col-sm-3 col-lg-3 all_players" id="left_panel">
-                    <h2>Players List</h3>
+                    <h2>Players List</h2>
                     <div class="list-group"></div>
+                    <div class="alert alert-danger" role="alert" id="wrong_achieved_message" style="display: none; font-weight: bold;" >
+                        You are in round <span class="current_round"></span> you could not achieve <span class="wrong_achieved"></span>
+                    </div>
                 </div>
             </div>
         </div>

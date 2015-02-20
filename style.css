@@ -2,10 +2,12 @@
     padding-top: 1%;
     padding-bottom: 1%;
 }
+.glyphicon {
+    font-size: 30px;
+}
 .clickable {
     height: 50px;
-    padding: 1% 10%;
-    font-size: 30px;
+    padding: 5% 10%;
 }
 .clickable:hover {
     cursor: pointer;
