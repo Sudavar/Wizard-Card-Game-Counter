@@ -8,16 +8,16 @@ http://projects.codescar.eu/wizard/
 
 TODO list:
 ------------
-- [ ] Lock so no refresh or back is pressed/done.
-- [ ] Save game every X minute in local storage
-- [ ] Unlock predictions
-- [ ] Modify final Score
-- [ ] Option to start game in X round with X score
-- [ ] On input click, clear value
-- [ ] ulopoiisi parallagis, teleutaios den mporei na pei prediction poy na kanei iso me ton arithmo twn rounds
-- [ ] to next na min pigainei se round megalutero tou current round
-- [ ] koumpi unlock gia diorthwsi twn prediction, diathesimo mono apo to start mexri to done gia kathe round
-- [ ] ftiaximo tou finish game, koumpi gia restart, etc.
+- [  ] Lock so no refresh or back is pressed/done.
+- [  ] Save game every X minute in local storage
+- [  ] Unlock predictions
+- [  ] Modify final Score
+- [  ] Option to start game in X round with X score
+- [  ] On input click, clear value
+- [  ] ulopoiisi parallagis, teleutaios den mporei na pei prediction poy na kanei iso me ton arithmo twn rounds
+- [ X ] to next na min pigainei se round megalutero tou current round
+- [  ] koumpi unlock gia diorthwsi twn prediction, diathesimo mono apo to start mexri to done gia kathe round
+- [  ] ftiaximo tou finish game, koumpi gia restart, etc.
 
 Contributions
 -------------
