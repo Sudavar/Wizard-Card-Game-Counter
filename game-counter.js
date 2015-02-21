@@ -164,7 +164,8 @@ game.roundInit = function() {
     $( '#start_round' ).prop( 'disabled', true );
 }
 
-game.nextPlayer = function() {
+game.nextPlayer = function( event ) {
+    event.preventDefault();
     $( game.plPanels[ game.curPlayer ] ).addClass( 'hidden' );
     $( game.plTable[ game.curPlayer ] ).removeClass( 'active' );
     if ( game.curPlayer + 1 == game.gamePlayers ) {
@@ -175,7 +176,8 @@ game.nextPlayer = function() {
     game.curPlayer++;
 };
 
-game.previousPlayer = function() {
+game.previousPlayer = function( event ) {
+    event.preventDefault();
     $( game.plPanels[ game.curPlayer ] ).addClass( 'hidden' );
     $( game.plTable[ game.curPlayer ] ).removeClass( 'active' );
     if ( game.curPlayer === 0 ) {
@@ -199,6 +201,18 @@ game.tableChange = function() {
     } else {
         return ;
     }
+};
+
+game.checkBounds = function() {
+    if ( $( this ).val() > game.curRound ) {
+        $( this ).val( game.curRound + 1 );
+    }
+    var tmp = Number( $( this ).val(), 10 );
+    if ( isNaN( tmp ) || tmp == "" ) {
+        tmp = 0;
+    }
+    console.log( tmp );
+    $( this ).val( Math.floor( tmp ) );
 };
 
 game.addPlayer = function() {
@@ -241,6 +255,8 @@ $( document ).ready( function() {
     $( '.next_player' ).click( game.nextPlayer );
     $( '.previous_player' ).click( game.previousPlayer );
     $( '.list-group' ).on( 'click', 'a', game.tableChange );
+    $( '.main_info' ).on( 'change', '.prediction, .achieved', game.checkBounds );
+    $( '.main_info' ).on( 'click', '.prediction, .achieved', clearValue );
 
     $( '#form' ).submit( function( event ) {
 		event.preventDefault();
@@ -268,3 +284,7 @@ function leftPanelResize() {
     var tmp = $( $( '#main_panel' )[0] ).height() * 0.9;
     $( '#left_panel' ).css( 'max-height', tmp );
 };
+
+function clearValue() {
+    $( this ).val( '' );
+}
