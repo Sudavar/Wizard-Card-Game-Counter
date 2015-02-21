@@ -85,7 +85,7 @@ game.lockPrediction = function() {
         $( '.prediction:visible' ).prop( 'disabled', true );
         if ( game.curPlayer + 1 < game.gamePlayers ) {
             $( game.plPanels[ game.curPlayer + 1 ] ).find( '.prediction' ).prop( 'disabled', false );
-            $( game.plPanels[ game.curPlayer + 1 ] ).find( '.prediction_lock' ).toggleClass( 'hidden' );
+            $( game.plPanels[ game.curPlayer + 1 ] ).find( '.prediction_lock' ).removeClass( 'hidden' );
         } else {
             $( '#start_round' ).prop( 'disabled', false );
         }
@@ -211,7 +211,6 @@ game.checkBounds = function() {
     if ( isNaN( tmp ) || tmp == "" ) {
         tmp = 0;
     }
-    console.log( tmp );
     $( this ).val( Math.floor( tmp ) );
 };
 
@@ -255,8 +254,9 @@ $( document ).ready( function() {
     $( '.next_player' ).click( game.nextPlayer );
     $( '.previous_player' ).click( game.previousPlayer );
     $( '.list-group' ).on( 'click', 'a', game.tableChange );
+    $( '.main_info' ).on( 'focus', '.prediction, .achieved', clearValue );
     $( '.main_info' ).on( 'change', '.prediction, .achieved', game.checkBounds );
-    $( '.main_info' ).on( 'click', '.prediction, .achieved', clearValue );
+    $( '.main_info' ).on( 'blur', '.prediction, .achieved', game.checkBounds );
 
     $( '#form' ).submit( function( event ) {
 		event.preventDefault();
