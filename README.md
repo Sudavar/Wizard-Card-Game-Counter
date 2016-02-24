@@ -20,7 +20,7 @@ TODO list:
 
 Contributions
 -------------
-Anyone is welcome to contribute to Advanced Excerpt.
+Anyone is welcome to contribute to Wizard Card Game Counter.
 
 There are various ways you can contribute:
 
